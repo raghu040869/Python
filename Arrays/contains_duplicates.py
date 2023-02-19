@@ -1,12 +1,12 @@
 def contains_duplicates(nums):
     result = False
     for i in range(len(nums)):
-        if nums[i] in nums[i:len(nums) - 1]:
+        if nums[i] in nums[i+1:len(nums)]:
             result = True
             break
     return result
 
-nums = [1, 2, 3, 1]
+nums = [1,2,3,1]
 print(contains_duplicates(nums))
 nums = [1,2,3,4]
 print(contains_duplicates(nums))
